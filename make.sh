@@ -2,7 +2,7 @@
 #Steps to run in folder with parsed corpora
 
 # 0) Copy all corpus files into single file in directory
-cat data/PPCEME-RELEASE-3/corpus/psd/*/*.psd data/PPCMBE2-RELEASE-1/corpus/psd/*.psd data/PCEEC/corpus/psd/*ref > corpus.txt
+cat corpus/PPCEME-RELEASE-3/corpus/psd/*/*.psd corpus/PPCMBE2-RELEASE-1/corpus/psd/*.psd corpus/PCEEC/corpus/psd/*ref > corpus.txt
 
 # 1) add-cp.q (from corpus-tools repository) on all the corpora
 CS_COMMAND="java -classpath ./CS_2.003.04.jar csearch/CorpusSearch"

@@ -35,12 +35,21 @@ To run the code either download the files as a [ZIP](https://github.com/christop
 
     git clone https://github.com/christopherahern/do-PPCHE.git
 
-Change directories to the cloned repository and create a symbolic link to the root directory of 
-your copy of your local copy of the [PPCME2](https://www.ling.upenn.edu/hist-corpora/PPCME2-RELEASE-4/index.html):
+Change directories to the cloned repository. If all of the corpora required (PPCME2, PPCEME, PPCMBE2, PCEEC) are all
+in the same directory, then create a symbolic link to that directory:
 
-    ln -s <location of PPCME2> corpus 
+    ln -s <directory containing all of the corpora> corpus
 
-Now run the make script to output the data to `data/neg-data.csv`:
+If the corpora are located in various directory, then create a corpus directory, change to that directory and
+create symbolic links to the root directories of each of the individual corpora:
+
+    mkdir corpus
+    cd corpus
+    ln -s <location of corpus>
+    ...
+
+Once you've structured the repository with the correct symbolic links, run the make script, which
+outputs the data to `*`:
 
     ./make.sh
 
@@ -78,5 +87,5 @@ It takes a lot of time and effort to build and annotate historical corpora well,
 
 # Comments
 
-If you have comments or questions about anything, feel free to email christopher.ahern@gmail.com 
-or hbacovci@gmail.com or [create an issue](https://github.com/christopherahern/do-PPCHE/issues)
+If you have comments or questions about anything, feel free to email hbacovci@gmail.com 
+or christopher.ahern@gmail.com, or [create an issue](https://github.com/christopherahern/do-PPCHE/issues)
