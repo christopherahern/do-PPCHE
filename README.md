@@ -1,7 +1,7 @@
 # Description
 
 This repository contains the source code to generate do-support data from 
-the [Penn Parsed Corpora of Middle English (PPCME2)](https://www.ling.upenn.edu/hist-corpora/)
+the [Penn Parsed Corpora of Middle English](https://www.ling.upenn.edu/hist-corpora/)
 and the [York-Helsinki Parsed Corpus of Early English Correspondence](http://www-users.york.ac.uk/~lang22/PCEEC-manual/index.htm).
 
 The queries and the code were constructed by [Hezekiah Akiva Bacovcin](http://www.hakivabacovcin.com/) and 
