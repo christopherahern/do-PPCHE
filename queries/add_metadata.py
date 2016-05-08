@@ -11,9 +11,9 @@ def tryint(x):
 
 # Generates a python database and adds correct metadata to file
 
-dbfile = open('./database/English_database.txt').readlines()
+dbfile = open('./parsedenglish_database/English_database.txt').readlines()
 
-names = dbfile[0].rstrip()
+names = '\t'.join(dbfile[0].rstrip().split(':'))
 
 db = {}
 # Database is a dictionary of dicitonaries
@@ -24,10 +24,10 @@ for line in dbfile[1:]:
     s = line.rstrip().split(':')
     print(s[0])
     try:
-        db[s[0]][(s[1], s[2])] = line.rstrip()
+        db[s[0]][(s[1], s[2])] = '\t'.join(s)
     except:
         db[s[0]] = {}
-        db[s[0]][(s[1], s[2])] = line.rstrip()
+        db[s[0]][(s[1], s[2])] = '\t'.join(s)
 
 # Add the non-metadata column labels
 names += open('./database/CodingNames.txt').readline()
@@ -46,8 +46,8 @@ filelen = len(coded_file)
 for line in coded_file:
     i += 1
     print (str(i) + ' out of ' + str(filelen))
-    codes = line.split('@')[0] + '\n'
-    token = line.split('@')[1].split('.')[-1]
+    codes = '\t'.join(line.split('@')[0].split(':')) + '\n'
+    token = line.split('@')[1].split('.')[-1].rstrip()
     filename = line.split('@')[1].split(',')[0].lower()
     try:
         for text in db[filename].keys():

@@ -1,0 +1,3 @@
+[submodule "parsedenglish_database"]
+	path = parsedenglish_database
+	url = https://github.com/bacovcin/parsedenglish_database
