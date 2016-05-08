@@ -21,7 +21,7 @@ echo "Preparing corpus for duplicate removal"
 $CS_COMMAND ./queries/dummy.q corpus.txt.out.out
 	# Outputs to: ./queries/dummy.out
 
-#4) run RemoveDup.py on the output from remove-dup-cp.q
+#4) run RemoveDup.py on the output from dummy.q
 echo "Removing duplicate tokens from corpus"
 python3 ./queries/RemoveDup.py ./queries/dummy.out
 	# Outputs to: dummy.psd
