@@ -30,7 +30,7 @@ for line in dbfile[1:]:
         db[s[0]][(s[1], s[2])] = '\t'.join(s)
 
 # Add the non-metadata column labels
-names += open('./database/CodingNames.txt').readline()
+#names += open('./database/CodingNames.txt').readline()
 
 # Open the final file
 outfile = open('do-support.txt', 'w')
@@ -45,7 +45,7 @@ i = 0
 filelen = len(coded_file)
 for line in coded_file:
     i += 1
-    print (str(i) + ' out of ' + str(filelen))
+    #print (str(i) + ' out of ' + str(filelen))
     codes = '\t'.join(line.split('@')[0].split(':')) + '\n'
     token = line.split('@')[1].split('.')[-1].rstrip()
     filename = line.split('@')[1].split(',')[0].lower()

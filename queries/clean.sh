@@ -1,8 +1,8 @@
 #!/bin/bash
-rm ../corpus.txt
-rm ../corpus.txt.out 
-rm ../corpus.txt.out.out
-rm dummy.out
-rm dummy.psd
-rm do-support.cod
-rm do-support.cod.ooo
+rm ./queries/corpus.txt
+rm ./queries/corpus.txt.out 
+rm ./queries/corpus.txt.out.out
+rm ./queries/dummy.out
+rm ./queries/dummy.psd
+rm ./queries/do-support.cod
+rm ./queries/do-support.cod.ooo
