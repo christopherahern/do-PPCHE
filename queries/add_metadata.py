@@ -22,7 +22,7 @@ db = {}
 # For single text files the token ids = x
 for line in dbfile[1:]:
     s = line.rstrip().split(':')
-    #print(s[0])
+    # print(s[0])
     try:
         db[s[0]][(s[1], s[2])] = '\t'.join(s)
     except:
@@ -30,14 +30,15 @@ for line in dbfile[1:]:
         db[s[0]][(s[1], s[2])] = '\t'.join(s)
 
 # Add the non-metadata column labels
-#names += open('./database/CodingNames.txt').readline()
+# names += open('./database/CodingNames.txt').readline()
 
 # Open the final file
 outfile = open('data/do-support.txt', 'w+')
-outfile.write(names + '\t' + '\t'.join(['do.supp', 'clause', 'negation']) + '\n')
+outfile.write(names +
+              '\t' + '\t'.join(['do.supp', 'clause', 'negation']) + '\n')
 
 
-########################### add coding column names and \n
+# Add coding column names and \n
 
 # Load the coding output
 coded_file = open('./queries/do-support.cod.ooo').readlines()
@@ -48,7 +49,7 @@ i = 0
 filelen = len(coded_file)
 for line in coded_file:
     i += 1
-    #print (str(i) + ' out of ' + str(filelen))
+    # print (str(i) + ' out of ' + str(filelen))
     codes = '\t'.join(line.split('@')[0].split(':')) + '\n'
     token = line.split('@')[1].split('.')[-1].rstrip()
     filename = line.split('@')[1].split(',')[0].lower()
@@ -68,7 +69,9 @@ for line in coded_file:
     except:
         if filename not in keyerrors:
             keyerrors.append(filename)
-            print filename
-outfile = open('./queries/missing_keys.txt', 'w')
-for filename in keyerrors:
-    outfile.write(filename + '\n')
+            print(filename + ' is missing from database...')
+
+if len(keyerrors) > 0:
+    outfile = open('./queries/missing_keys.txt', 'w')
+    for filename in keyerrors:
+        outfile.write(filename + '\n')

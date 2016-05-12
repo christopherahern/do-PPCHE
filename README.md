@@ -54,7 +54,7 @@ outputs the data to `*`:
     ./make.sh
 
 
-As a point of reference, `make.sh` takes less than two minutes to run on a laptop:
+As a point of reference, `make.sh` takes about 13 minutes to run on a desktop with other applications running:
 
     time ./make.sh
 
