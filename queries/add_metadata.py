@@ -22,7 +22,7 @@ db = {}
 # For single text files the token ids = x
 for line in dbfile[1:]:
     s = line.rstrip().split(':')
-    print(s[0])
+    #print(s[0])
     try:
         db[s[0]][(s[1], s[2])] = '\t'.join(s)
     except:
@@ -33,8 +33,11 @@ for line in dbfile[1:]:
 #names += open('./database/CodingNames.txt').readline()
 
 # Open the final file
-outfile = open('do-support.txt', 'w')
-outfile.write(names)
+outfile = open('data/do-support.txt', 'w')
+outfile.write(names + '\t' + '\t'.join(['do.supp', 'clause', 'negation']) + '\n')
+
+
+########################### add coding column names and \n
 
 # Load the coding output
 coded_file = open('./queries/do-support.cod.ooo').readlines()
@@ -65,7 +68,7 @@ for line in coded_file:
     except:
         if filename not in keyerrors:
             keyerrors.append(filename)
-
-outfile = open('missing_keys.txt', 'w')
+            print filename
+outfile = open('./queries/missing_keys.txt', 'w')
 for filename in keyerrors:
     outfile.write(filename + '\n')

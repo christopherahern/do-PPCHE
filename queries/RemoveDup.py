@@ -42,8 +42,8 @@ for arg in sys.argv:
                     write = 1
                     tokens[tokenl[0]] = {}
                     tokens[tokenl[0]][tokenl[1]] = [tokent]
-                print(str(i) + ' out of ' + str(len(lines)) +
-                      '; Duplicate: ' + str(bool(abs(write - 1))))
+                #print(str(i) + ' out of ' + str(len(lines)) +
+                #      '; Duplicate: ' + str(bool(abs(write - 1))))
             elif write == 1:  # Line contains parts of unseen tree, write out
                 outfile.write(line)
             elif start == 1:  # Part of token text, store for later

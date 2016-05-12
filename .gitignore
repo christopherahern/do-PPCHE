@@ -6,4 +6,6 @@ do-support.cod
 do-support.cod.ooo
 do-support.tsv
 external-cp.cod
-
+dummy.out
+queries/dummy.psd
+data/*
