@@ -35,7 +35,8 @@ for line in dbfile[1:]:
 # Open the final file
 outfile = open('data/do-support.txt', 'w+')
 outfile.write(names +
-              '\t' + '\t'.join(['do.supp', 'clause', 'negation']) + '\n')
+              '\t' + '\t'.join(['token.num', 'do.supp',
+                                'clause', 'negation']) + '\n')
 
 
 # Add coding column names and \n
