@@ -33,7 +33,7 @@ for line in dbfile[1:]:
 #names += open('./database/CodingNames.txt').readline()
 
 # Open the final file
-outfile = open('data/do-support.txt', 'w')
+outfile = open('data/do-support.txt', 'w+')
 outfile.write(names + '\t' + '\t'.join(['do.supp', 'clause', 'negation']) + '\n')
 
 

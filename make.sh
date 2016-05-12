@@ -40,6 +40,7 @@ $CS_COMMAND ./queries/only-coding.q ./queries/do-support.cod
 # To this point is: 10 min 
 #7) Run add_metadata.py to create the final tab-separated file
 echo "Adding metadata and creating final file"
+mkdir data
 python ./queries/add_metadata.py
 	# Outputs to: do-support.txt
 
