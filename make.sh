@@ -23,7 +23,7 @@ $CS_COMMAND ./queries/dummy.q ./queries/corpus.txt.out.out
 
 #4) run RemoveDup.py on the output from dummy.q (Removes tokens with identical text; deals with corpus overlap issues)
 echo "Removing duplicate tokens from corpus"
-python3 ./queries/RemoveDup.py ./queries/dummy.out
+python ./queries/RemoveDup.py ./queries/dummy.out
 	# Outputs to: dummy.psd
 
 #5) run the do-support.c query on dummy.psd
@@ -40,9 +40,9 @@ $CS_COMMAND ./queries/only-coding.q ./queries/do-support.cod
 #7) Run add_metadata.py to create the final tab-separated file
 echo "Adding metadata and creating final file"
 mkdir data
-python3 ./queries/add_metadata.py
+python ./queries/add_metadata.py
 	# Outputs to: do-support.txt
 
 # 8) Clean up intermediate files that duplicate the corpus
 #echo "Cleaning up intermediate duplicate files"
-./queries/clean.sh
+#./queries/clean.sh

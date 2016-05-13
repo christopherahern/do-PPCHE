@@ -22,7 +22,6 @@ db = {}
 # For single text files the token ids = x
 for line in dbfile[1:]:
     s = line.rstrip().split(':')
-    # print(s[0])
     try:
         db[s[0]][(s[1], s[2])] = '\t'.join(s)
     except:
@@ -50,7 +49,6 @@ i = 0
 filelen = len(coded_file)
 for line in coded_file:
     i += 1
-    # print (str(i) + ' out of ' + str(filelen))
     codes = '\t'.join(line.split('@')[0].split(':')) + '\n'
     token = line.split('@')[1].split('.')[-1].rstrip()
     filename = line.split('@')[1].split(',')[0].lower()
