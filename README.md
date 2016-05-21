@@ -48,8 +48,12 @@ create symbolic links to the root directories of each of the individual corpora:
     ln -s <location of corpus>
     ...
 
-Once you've structured the repository with the correct symbolic links, run the make script, which
-outputs the data to `*`:
+Then pull in [information](https://github.com/bacovcin/parsedenglish_database/tree/9a049bd27df1d89acd6ddba3eb58169d964c1f14)
+ about the documents in the corpus:
+
+    git submodule update --init
+
+Once you've structured the repository, run the make script, which outputs the data to `data/do-support.txxt`:
 
     ./make.sh
 
@@ -61,13 +65,14 @@ As a point of reference, `make.sh` takes about 13 minutes to run on a desktop wi
 
 ## Output
 
-The data will be output to `*` with the following columns:
-
-* first : 
+In addition to the information compiled in [this repository](https://github.com/bacovcin/parsedenglish_database/blob/9a049bd27df1d89acd6ddba3eb58169d964c1f14/English_database.txt).
+The data will be output to `data/do-support.txt` with the following additional columns:
+do.supp	clause	negation
+* do.supp : whether or not the token exhibits do-support
+* clause : the kind of clause (declarative, question, imperative)
+* negation : whether the sentence contains sentential negation or not
 
 Note that these are all defined by the queries in `coding.c`.
-
-The dates of the document can be found in `*`. 
 
 
 # Citation

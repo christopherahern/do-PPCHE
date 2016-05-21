@@ -45,4 +45,4 @@ python ./queries/add_metadata.py
 
 # 8) Clean up intermediate files that duplicate the corpus
 #echo "Cleaning up intermediate duplicate files"
-#./queries/clean.sh
+./queries/clean.sh
