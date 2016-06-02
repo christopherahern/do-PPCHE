@@ -2,8 +2,8 @@ node: CP*
 coding_query:
 
 1: {
-MOD: (CP* iDoms IP*) AND (IP* iDomsMod IP*|CONJ* BAG*|BE*|BED*|BEI*|BEN*|BEP*|HAG*|HAN*|HV*|HVD*|HVI*|HVN*|HVP*|MD*|MD0*)
-DO: (CP* iDoms IP*) AND (IP* iDomsMod IP*|CONJ* DAG*|DAN*|DO*|DOD*|DOI*|DON*|DOP*)
+DO: (CP* iDoms IP*) AND (IP* iDomsMod IP*|CONJ* DAG*|DAN*|DO*|DOD*|DOI*|DON*|DOP*) AND (IP* iDomsMod IP*|CONJ* VB|HV)
+MOD: (CP* iDoms IP*) AND (IP* iDomsMod IP*|CONJ* BAG*|BE*|BED*|BEI*|BEN*|BEP*|HAG*|HAN*|HV*|HVD*|HVI*|HVN*|HVP*|MD*|MD0*|NEG+MD*)
 NOTDO: ELSE
 }
 
