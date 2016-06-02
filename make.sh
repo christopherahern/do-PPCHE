@@ -40,7 +40,7 @@ $CS_COMMAND ./corpus-tools/only-coding.q ./queries/do-support.cod
 #7) Run add_metadata.py to create the final tab-separated file
 echo "Adding metadata and creating final file"
 mkdir data
-python ./parsedenglish_database/add_metadata.py ./parsedenglish_database/English_database.txt ./queries/do-support.cod.ooo ./data/do-support.txt "token.num" "do.supp" "clause" "neagtion"
+python ./parsedenglish_database/add_metadata.py ./parsedenglish_database/English_database.txt ./queries/do-support.cod.ooo ./data/do-support.txt "token.num" "do.supp" "clause" "negation"
 	# Outputs to: ./data/do-support.txt
 
 # 8) Clean up intermediate files that duplicate the corpus
