@@ -55,13 +55,16 @@ Then pull in [information](https://github.com/bacovcin/parsedenglish_database/tr
 
 Once you've structured the repository, run the make script, which outputs the data to `data/do-support.txxt`:
 
-    ./make.sh
+    make all
 
 
 As a point of reference, `make.sh` takes about 13 minutes to run on a desktop with other applications running:
 
     time ./make.sh
 
+If you want to remove the intermediate files, run:
+
+    make clean
 
 ## Output
 
