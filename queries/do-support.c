@@ -20,3 +20,8 @@ OTHER: ELSE
 NEG: (CP* iDoms IP*) AND (IP* iDomsMod IP*|CONJ* NEG*)
 AFF: (CP* iDoms IP*)
 }
+
+4 : {
+contracted:  NEG: (CP* iDoms IP*) AND (IP* iDomsMod IP*|CONJ* NEG*) AND (NEG* iDoms $n't)
+-: ELSE                                                                         
+}
