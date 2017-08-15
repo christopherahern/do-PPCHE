@@ -22,6 +22,6 @@ AFF: (CP* iDoms IP*)
 }
 
 4 : {
-contracted:  NEG: (CP* iDoms IP*) AND (IP* iDomsMod IP*|CONJ* NEG*) AND (NEG* iDoms $n't)
+contracted: (CP* iDoms IP*) AND (IP* iDomsMod IP*|CONJ* NEG*) AND (NEG* iDoms n't)
 -: ELSE                                                                         
 }
