@@ -34,7 +34,7 @@ queries/do-support.cod.ooo : queries/do-support.cod corpus-tools/only-coding.q
 data/do-support.txt : queries/do-support.cod.ooo parsedenglish_database/add_metadata.py parsedenglish_database/English_database.txt Makefile
 	@echo ---Adding metadata and creating final file---
 	@mkdir -p $(@D)
-	python $(word 2,$^) $(word 3,$^) $< $@ "do.supp" "clause" "negation"
+	python $(word 2,$^) $(word 3,$^) $< $@ "do.supp" "clause" "negation" "contraction"
 
 .PHONY : all
 all : data/do-support.txt
