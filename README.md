@@ -53,14 +53,14 @@ Then pull in [information](https://github.com/bacovcin/parsedenglish_database/tr
 
     git submodule update --init
 
-Once you've structured the repository, run the make script, which outputs the data to `data/do-support.txxt`:
+Once you've structured the repository, run the make script, which outputs the data to `data/do-support.txt`:
 
     make all
 
 
-As a point of reference, `make.sh` takes about 13 minutes to run on a desktop with other applications running:
+As a point of reference, generating the data set takes about 14 minutes to run on a desktop with other applications running:
 
-    time ./make.sh
+    time make all
 
 If you want to remove the intermediate files, run:
 
@@ -74,8 +74,9 @@ do.supp	clause	negation
 * do.supp : whether or not the token exhibits do-support
 * clause : the kind of clause (declarative, question, imperative)
 * negation : whether the sentence contains sentential negation or not
+* contraction : whether negation was contracted or not
 
-Note that these are all defined by the queries in `coding.c`.
+Note that these are all defined by the queries in `do-support.c`.
 
 
 # Citation
